@@ -83,3 +83,45 @@ describe("ucFirst", () => {
     assert((';.ER'.ucFirst()) === ';.ER');
   });
 });
+
+describe("isQuestion", () => {
+  it('should return type of boolean', () => {
+    assert(typeof(('olawale'.isQuestion())) === 'boolean');
+  });
+  it('should return false when string is not a question', () => {
+    assert.isFalse('olawale'.isQuestion());
+  });
+  it('should return true when string is a question', () => {
+    assert.isTrue('What is your name?'.isQuestion());
+  });
+  it('should return false', () => {
+    assert.isFalse('olaw?le'.isQuestion());
+  });
+  it('should return false', () => {
+    assert.isFalse('?'.isQuestion());
+  });
+  it('should return false', () => {
+    assert.isFalse('?hey'.isQuestion());
+  });
+});
+
+describe("words", () => {
+  it('should return type of Object', () => {
+    assert(typeof(('olawale'.words())) === 'object');
+  });
+  it('should return instance of array', () => {
+    assert.isTrue('olawale adedeji'.words() instanceof Array);
+  });
+  it('should return ["my", "name", "is", "olawale"]', () => {
+    assert.deepEqual('my name is olawale'.words(), [ 'my', 'name', 'is', 'olawale' ]);
+  });
+});
+
+describe("wordCount", () => {
+  it('should return type of number', () => {
+    assert(typeof(('my name is olawale'.wordCount())) === 'number');
+  });
+  it('should return instance of array', () => {
+    assert(('my name is olawale'.wordCount()) === 4);
+  });
+});
