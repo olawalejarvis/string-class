@@ -77,6 +77,62 @@ const stringPrototype = {
     return this.replace(/[a-z]|[A-Z]/g, (match, index) => {
       return (index+1) % 2 === 1? match.toLower() : match.toUpper();
     });
+  },
+
+  /**
+ * Identifies the middle character(s)
+ * @return {string} The character located in the middle of the string
+ */
+  getMiddle() {
+    let lenDiv2 = this.length / 2;
+    return this.length % 2 === 0? `${this[lenDiv2-1]}${this[(lenDiv2)]}`
+                              : this[Math.floor(lenDiv2)];
+  },
+
+  /**
+ * Converts numbers into words
+ * @return {String} Representation of numbers in words
+ */
+  numberWords() {
+    const numberToWord = ['zero', 'one', 'two', 'three', 'four',
+                          'five', 'six', 'seven', 'eight', 'nine']
+    return this.replace(/\d/g, function(match){
+      return `${numberToWord[match]}`;
+    });
+  },
+
+  /**
+ * Tests if string is single digit
+ * @return {Boolean} True or False depending on the match
+ */
+  isDigit() {
+    return (/^\d$/).test(this);
+  },
+
+  /**
+ * Tests if a string contains double characters
+ * @return {Boolean} True or False depending on the match
+ */
+  doubleCheck(){
+    return (/(.)\1/).test(this);
+  },
+
+  /**
+ * Performs a currency representation of a string
+ * @return {String} Represented as a currency
+ */
+  toCurrency(){
+      return Number(this)
+              .toFixed(2)
+              .replace(/(\d)(?=(\d{3})+(?!\d))/g,'$1,');
+  },
+
+  /**
+ * Performs a number representation of a currency
+ * @return {String} Represented as a number
+ */
+  fromCurrency(){
+    return Number(this.replace(/\,/g, ''));
   }
 };
 
