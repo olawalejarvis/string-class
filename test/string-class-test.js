@@ -1,6 +1,5 @@
-'use strict';
-
 const assert = require('chai').assert;
+const expect = require('chai').expect;
 require('../src/stringClass');
 
 describe("hasVowels", () => {
@@ -8,7 +7,8 @@ describe("hasVowels", () => {
     assert(typeof(('olawale'.hasVowels())) === 'boolean');
   });
   it('should return true if string has vowel', () => {
-    assert.isTrue('olawale'.hasVowels());
+    // assert.isTrue('olawale'.hasVowels());
+    expect('olawale'.hasVowels()).to.be.true;
   });
   it('should return false if string has no vowel', () => {
     assert.isFalse('vc'.hasVowels(), "message");
@@ -123,5 +123,80 @@ describe("wordCount", () => {
   });
   it('should return instance of array', () => {
     assert(('my name is olawale'.wordCount()) === 4);
+  });
+});
+
+describe("inverseCase", () => {
+  it('should return type of string', () => {
+    assert(typeof(('olawale'.inverseCase())) === 'string');
+  });
+  it('should return inverse case for all string', () => {
+    assert(('olawale'.inverseCase()) === 'OLAWALE');
+  });
+  it('should return inverse case for all string', () => {
+    assert(('OLAWALE'.inverseCase()) === 'olawale');
+  });
+  it('should return inverse case for all string', () => {
+    assert(('olWAlE'.inverseCase()) === 'OLwaLe');
+  });
+});
+
+describe("alternatingCase", () => {
+  it('should return type of string', () => {
+    assert(typeof(('olawale'.alternatingCase())) === 'string');
+  });
+  it('should return alternate case for all string', () => {
+    assert(('olawale'.alternatingCase()) === 'oLaWaLe');
+  });
+  it('should return inverse case for all string', () => {
+    assert(('OLAWALE'.alternatingCase()) === 'oLaWaLe');
+  });
+});
+
+describe("getMiddle", () => {
+  it('should return type of string', () => {
+    assert(typeof(('olawale'.getMiddle())) === 'string');
+  });
+  it('should return middle string for all string', () => {
+    assert(('olawale'.getMiddle()) === 'w');
+  });
+  it('should return middle string for all string', () => {
+    assert(('read'.getMiddle()) === 'ea');
+  });
+});
+
+describe("numberWords", () => {
+  it('should return type of string', () => {
+    assert(typeof(('12312'.numberWords())) === 'string');
+  });
+  it('should return number to word for all number', () => {
+    assert(('123'.numberWords()) === 'onetwothree');
+  });
+  it('should return inverse case for all string', () => {
+    assert(('read12'.numberWords()) === 'readonetwo');
+  });
+});
+
+describe("isDigit", () => {
+  it('should return type of boolean', () => {
+    assert(typeof(('1'.isDigit())) === 'boolean');
+  });
+  it('should return true', () => {
+    assert.isTrue('1'.isDigit());
+  });
+  it('should return inverse case for all string', () => {
+    assert.isFalse('re12'.isDigit());
+  });
+});
+
+describe("doubleCheck", () => {
+  it('should return type of boolean', () => {
+    assert(typeof(('1211'.doubleCheck())) === 'boolean');
+  });
+  it('should return true', () => {
+    assert.isTrue('11  '.doubleCheck());
+  });
+  it('should return inverse case for all string', () => {
+    assert.isFalse('re12'.doubleCheck());
   });
 });
