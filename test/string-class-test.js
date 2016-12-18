@@ -8,14 +8,12 @@ describe("StringClass", () => {
     });
     it('should return true if string has vowel', () => {
       assert.isTrue('olawale'.hasVowels());
+      assert.isTrue('amity'.hasVowels());
+      assert.isTrue('AndElA'.hasVowels());
     });
     it('should return false if string has no vowel', () => {
-      assert.isFalse('vc'.hasVowels(), "message");
-    });
-    it('should return false if string has no vowel', () => {
+      assert.isFalse('vc'.hasVowels());
       assert.isFalse('...£$...'.hasVowels());
-    });
-    it('should return false if string has no vowel', () => {
       assert.isFalse('99999999999'.hasVowels());
     });
   });
@@ -26,14 +24,7 @@ describe("StringClass", () => {
     });
     it('should return upper case for all string', () => {
       assert(('olawale'.toUpper()) === 'OLAWALE');
-    });
-    it('should return upper case for all string', () => {
       assert(('OLAWALE'.toUpper()) === 'OLAWALE');
-    });
-    it('should return upper case for all string', () => {
-      assert(('12333'.toUpper()) === '12333');
-    });
-    it('should return upper case for all string', () => {
       assert(('oLaWaLe'.toUpper()) === 'OLAWALE');
     });
     it('should return upper case for all string', () => {
@@ -47,14 +38,7 @@ describe("StringClass", () => {
     });
     it('should return lower case for all string', () => {
       assert(('olawale'.toLower()) === 'olawale');
-    });
-    it('should return lower case for all string', () => {
       assert(('OLAWALE'.toLower()) === 'olawale');
-    });
-    it('should return lower case for all string', () => {
-      assert(('12333'.toLower()) === '12333');
-    });
-    it('should return lower case for all string', () => {
       assert(('oLaWaLe'.toLower()) === 'olawale');
     });
     it('should return lower case for all string', () => {
@@ -68,14 +52,7 @@ describe("StringClass", () => {
     });
     it('should return first letter to be Upper case for all string', () => {
       assert(('olawale'.ucFirst()) === 'Olawale');
-    });
-    it('should return first letter to be Upper case for all string', () => {
       assert(('OLAWALE'.ucFirst()) === 'OLAWALE');
-    });
-    it('should return first letter to be Upper case for all string', () => {
-      assert(('12333'.ucFirst()) === '12333');
-    });
-    it('should return first letter to be Upper case for all string', () => {
       assert(('oLaWaLe'.ucFirst()) === 'OLaWaLe');
     });
     it('should return first letter to be Upper case for all string', () => {
@@ -89,18 +66,12 @@ describe("StringClass", () => {
     });
     it('should return false when string is not a question', () => {
       assert.isFalse('olawale'.isQuestion());
+      assert.isFalse('olaw?le'.isQuestion());
+      assert.isFalse('?'.isQuestion());
+      assert.isFalse('?hey'.isQuestion());
     });
     it('should return true when string is a question', () => {
       assert.isTrue('What is your name?'.isQuestion());
-    });
-    it('should return false', () => {
-      assert.isFalse('olaw?le'.isQuestion());
-    });
-    it('should return false', () => {
-      assert.isFalse('?'.isQuestion());
-    });
-    it('should return false', () => {
-      assert.isFalse('?hey'.isQuestion());
     });
   });
 
@@ -131,12 +102,8 @@ describe("StringClass", () => {
     });
     it('should return inverse case for all string', () => {
       assert(('olawale'.inverseCase()) === 'OLAWALE');
-    });
-    it('should return inverse case for all string', () => {
-      assert(('OLAWALE'.inverseCase()) === 'olawale');
-    });
-    it('should return inverse case for all string', () => {
       assert(('olWAlE'.inverseCase()) === 'OLwaLe');
+      assert(('OLAWALE'.inverseCase()) === 'olawale');
     });
   });
 
@@ -146,8 +113,6 @@ describe("StringClass", () => {
     });
     it('should return alternate case for all string', () => {
       assert(('olawale'.alternatingCase()) === 'oLaWaLe');
-    });
-    it('should return inverse case for all string', () => {
       assert(('OLAWALE'.alternatingCase()) === 'oLaWaLe');
     });
   });
@@ -158,8 +123,6 @@ describe("StringClass", () => {
     });
     it('should return middle string for all string', () => {
       assert(('olawale'.getMiddle()) === 'w');
-    });
-    it('should return middle string for all string', () => {
       assert(('read'.getMiddle()) === 'ea');
     });
   });
@@ -170,8 +133,6 @@ describe("StringClass", () => {
     });
     it('should return number to word for all number', () => {
       assert(('123'.numberWords()) === 'onetwothree');
-    });
-    it('should return inverse case for all string', () => {
       assert(('read12'.numberWords()) === 'readonetwo');
     });
   });
@@ -199,28 +160,26 @@ describe("StringClass", () => {
       assert.isFalse('re12'.doubleCheck());
     });
   });
+
   describe("toCurrency", () => {
     it('should return type of string', () => {
       assert(typeof(('1211'.toCurrency())) === 'string');
     });
     it('should return currect currency', () => {
       assert(('1234567'.toCurrency()) === '1,234,567.00');
-    });
-    it('should return currect currency', () => {
       assert(('1234567.98888'.toCurrency()) === '1,234,567.99');
     });
-    it('should return nan', () => {
+    it('should return nan when passing invalid string', () => {
       assert(('123ff4567.98ff888'.toCurrency()) === 'NaN');
     });
   });
+
   describe("fromCurrency", () => {
     it('should return type of number', () => {
       assert(typeof(('1211'.fromCurrency())) === 'number');
     });
     it('should return currect currency', () => {
       assert(('1,234,567.00'.fromCurrency()) === 1234567.00);
-    });
-    it('should return currect currency', () => {
       assert(('1,234,567.99'.fromCurrency()) === 1234567.99);
     });
   });
