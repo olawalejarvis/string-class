@@ -200,3 +200,28 @@ describe("doubleCheck", () => {
     assert.isFalse('re12'.doubleCheck());
   });
 });
+describe("toCurrency", () => {
+  it('should return type of string', () => {
+    assert(typeof(('1211'.toCurrency())) === 'string');
+  });
+  it('should return currect currency', () => {
+    assert(('1234567'.toCurrency()) === '1,234,567.00');
+  });
+  it('should return currect currency', () => {
+    assert(('1234567.98888'.toCurrency()) === '1,234,567.99');
+  });
+  it('should return nan', () => {
+    assert(('123ff4567.98ff888'.toCurrency()) === 'NaN');
+  });
+});
+describe("fromCurrency", () => {
+  it('should return type of number', () => {
+    assert(typeof(('1211'.fromCurrency())) === 'number');
+  });
+  it('should return currect currency', () => {
+    assert(('1,234,567.00'.fromCurrency()) === 1234567.00);
+  });
+  it('should return currect currency', () => {
+    assert(('1,234,567.99'.fromCurrency()) === 1234567.99);
+  });
+});
