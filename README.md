@@ -55,3 +55,6 @@ These methods were added:
 4.  To run tests
     `npm test`
 5.  Move the string-class.js file, located in the "src" directory, into any project directory you wish to use it in.
+
+## Web use
+URL: https://class-string.herokuapp.com/
