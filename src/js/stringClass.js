@@ -1,3 +1,4 @@
+"use strict";
 const stringPrototype = {
   /**
    * Check if a string contains vowels
@@ -13,7 +14,7 @@ const stringPrototype = {
  */
   toUpper() {
     return this.replace(/[a-z]/g, (match) => {
-      return String.fromCharCode(match.charCodeAt() - 32)
+      return String.fromCharCode(match.charCodeAt() - 32);
     });
   },
 

@@ -4,7 +4,7 @@
 
 <head>
 
-	<title>Andela String Class</title>
+  <title>Andela String Class</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="css/string.css">
 </head>
@@ -12,102 +12,102 @@
 
 <body>
 
-	<div class="string-header">
-	
-		<div class="header-text col-xs-9">
-			<span>Andela String Class</span>
-		</div>
+  <div class="string-header">
+  
+    <div class="header-text col-xs-9">
+      <span>Andela String Class</span>
+    </div>
 
-		<div class="about-text col-xs-3">
-			<span><a href="" data-toggle="modal" data-target="#aboutModal">About</a></span>
-		</div>
-	
-	</div>
+    <div class="about-text col-xs-3">
+      <span><a href="" data-toggle="modal" data-target="#aboutModal">About</a></span>
+    </div>
+  
+  </div>
 
-	<div class="string-body" ng-controller="stringController">
-		
-		<div class="input-panel">
-			<div class="input-string">
-				<label id="string-label" >Enter String Here: </label>
-				<input id="input-st" type="text" name="string" placeholder="type string here" ng-model="stringQuery" ng-change="	showResult(stringQuery, selectedMethod)">
-				<label class="select-label" id="string-label" >Select A Method:</label>
-	      <select class="form-control select-method" ng-model="selectedMethod" ng-change="showResult(stringQuery, 	selectedMethod)" ng-init="selectedMethod = options[0]"  ng-options="opt as opt.label for opt in options">
-	      </select>
-			</div>
-		</div>
+  <div class="string-body" ng-controller="stringController">
+    
+    <div class="input-panel">
+      <div class="input-string">
+        <label id="string-label" >Enter String Here: </label>
+        <input id="input-st" type="text" name="string" placeholder="type string here" ng-model="stringQuery" ng-change="	showResult(stringQuery, selectedMethod)">
+        <label class="select-label" id="string-label" >Select A Method:</label>
+        <select class="form-control select-method" ng-model="selectedMethod" ng-change="showResult(stringQuery, 	selectedMethod)" ng-init="selectedMethod = options[0]"  ng-options="opt as opt.label for opt in options">
+        </select>
+      </div>
+    </div>
 
-		<div class="display-panel">
-			<div class="display-result">
-				<label id="result-label" for="sel1">Result:</label>
-				<label>{{result}}</label>
-			</div>
-		</div>
+    <div class="display-panel">
+      <div class="display-result">
+        <label id="result-label" for="sel1">Result:</label>
+        <label>{{result}}</label>
+      </div>
+    </div>
 
 
-	</div>
+  </div>
 
-	<div class="modal fade" id="aboutModal" role="dialog">
+  <div class="modal fade" id="aboutModal" role="dialog">
     <div class="modal-dialog">
-				<!-- Modal content-->
+        <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
             <h4 id = "aboutTitle" class="modal-title">About String Class</h4>
         </div>
-      	<div class="modal-body" id = "aboutBody">
-					<p class = "question" > String Class Method </p>
-					<br>
-        	<pre class = "literallayout">
+        <div class="modal-body" id = "aboutBody">
+          <p class = "question" > String Class Method </p>
+          <br>
+          <pre class = "literallayout">
 
-        		<span>hasVowels</span><span class="about-des"> Returns true if the string contains vowels.</span>
+            <span>hasVowels</span><span class="about-des"> Returns true if the string contains vowels.</span>
 
-						<span>toUpper</span> <span class="about-des"> Returns the String in question but with all characters in upper cases as applicable.</span>
+            <span>toUpper</span> <span class="about-des"> Returns the String in question but with all characters in upper cases as applicable.</span>
 
-						<span>toLower</span><span class="about-des"> Returns the String in question but with all characters in their lower cases as applicable.</span>
+            <span>toLower</span><span class="about-des"> Returns the String in question but with all characters in their lower cases as applicable.</span>
 
-						<span>ucFirst</span><span class="about-des"> Returns the String in question but changes the First Character to an Upper case.</span>
-						
-						<span>isQuestion</span><span class="about-des"> Return true if the string is a question (ending with a question mark).</span>
+            <span>ucFirst</span><span class="about-des"> Returns the String in question but changes the First Character to an Upper case.</span>
+            
+            <span>isQuestion</span><span class="about-des"> Return true if the string is a question (ending with a question mark).</span>
 
-						<span>words</span><span class="about-des"> Returns a list of the words in the string, as an Array.</span>
+            <span>words</span><span class="about-des"> Returns a list of the words in the string, as an Array.</span>
 
-						<span>wordCount</span><span class="about-des"> Returns the number of words in the string.</span>
+            <span>wordCount</span><span class="about-des"> Returns the number of words in the string.</span>
 
-						<span>toCurrency</span><span class="about-des"> Returns a currency representation of the String</span>
+            <span>toCurrency</span><span class="about-des"> Returns a currency representation of the String</span>
 
-						<span>fromCurrency</span><span class="about-des"> Returns a number representation of the Currency String </span>
+            <span>fromCurrency</span><span class="about-des"> Returns a number representation of the Currency String </span>
 
-						<span>inverseCase</span><span class="about-des"> Returns each letter in the string as an inverse of its current case e.g Mr. Ben will return mR. bEN.</span>
+            <span>inverseCase</span><span class="about-des"> Returns each letter in the string as an inverse of its current case e.g Mr. Ben will return mR. bEN.</span>
 
-						<span>alternatingCase</span><span class="about-des"> Returns the letters in alternating cases. It must start with a lower case e.g Onomatopoeia will return oNoMaToPoEiA.</span>
+            <span>alternatingCase</span><span class="about-des"> Returns the letters in alternating cases. It must start with a lower case e.g Onomatopoeia will return oNoMaToPoEiA.</span>
 
-						<span>getMiddle</span><span class="about-des"> Returns the character(s) in the middle of the string</span>
+            <span>getMiddle</span><span class="about-des"> Returns the character(s) in the middle of the string</span>
 
-						<span>numberWords</span><span class="about-des"> Returns the numbers in words e.g 325 will return three two five.</span>
+            <span>numberWords</span><span class="about-des"> Returns the numbers in words e.g 325 will return three two five.</span>
 
-						<span>isDigit</span><span class="about-des"> Returns true if the string is a digit(one number) e.g 3 should return true and 34 will return false.</span>
+            <span>isDigit</span><span class="about-des"> Returns true if the string is a digit(one number) e.g 3 should return true and 34 will return false.</span>
 
-						<span>doubleCheck</span><span class="about-des"> Returns true if a string contains double characters(including whitespace character).</span>
+            <span>doubleCheck</span><span class="about-des"> Returns true if a string contains double characters(including whitespace character).</span>
 
         
-        	</pre>
-				</div>
-			</div>
-		</div>
-	</div>
+          </pre>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
-		<!--end of Modal Class-->
+    <!--end of Modal Class-->
 
 
-	<footer>
-		<p>Copyright 2016 - Andela Simulation - String Class</p>
-	</footer>
+  <footer>
+    <p>Copyright 2016 - Andela Simulation - String Class</p>
+  </footer>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
-	<script type="text/javascript" src="js/app.js"></script>
-	<script type="text/javascript" src="js/stringClass.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+  <script type="text/javascript" src="js/app.js"></script>
+  <script type="text/javascript" src="js/stringClass.js"></script>
 </body>
 </html>

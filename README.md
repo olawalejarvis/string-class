@@ -1,9 +1,6 @@
 [![Coverage Status](https://coveralls.io/repos/github/andela-oaladeusi/string-class/badge.svg?branch=development)](https://coveralls.io/github/andela-oaladeusi/string-class?branch=development)
-
 [![Build Status](https://travis-ci.org/andela-oaladeusi/string-class.svg?branch=development)](https://travis-ci.org/andela-oaladeusi/string-class)
-
 [![Code Climate](https://codeclimate.com/github/andela-oaladeusi/string-class/badges/gpa.svg)](https://codeclimate.com/github/andela-oaladeusi/string-class)
-
 [![Issue Count](https://codeclimate.com/github/andela-oaladeusi/string-class/badges/issue_count.svg)](https://codeclimate.com/github/andela-oaladeusi/string-class)
 
 # string-class
