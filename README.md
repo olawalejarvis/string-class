@@ -1,5 +1,7 @@
 [![Coverage Status](https://coveralls.io/repos/github/andela-oaladeusi/string-class/badge.svg?branch=development)](https://coveralls.io/github/andela-oaladeusi/string-class?branch=development)
 
+[![Build Status](https://travis-ci.org/andela-oaladeusi/string-class.svg?branch=development)](https://travis-ci.org/andela-oaladeusi/string-class)
+
 # string-class
 An extension of the String class in Javascript.
 Using Prototype Oriented Programming; methods, procedures and instance attributes are added to the String class to support more string manipulation features.

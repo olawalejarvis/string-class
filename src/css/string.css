@@ -1,0 +1,230 @@
+* {
+  margin: 0 auto;
+  padding: 0;
+}
+
+div.string-header {
+  height: 50px;
+  background: #074c99;
+}
+
+.header-text, .about-text{
+  color: #ffffff;
+  position: relative;
+  top: 20%;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.about-text span {
+	float: right;
+}
+
+body {
+	background: #ededed;
+}
+
+.input-panel{
+	height: 100px;
+	background: #ededed;
+	padding-left: 40px;
+  padding-right: 40px;
+}
+
+.input-string {
+  float: center;
+  height: 32px;
+  line-height: 30px;
+  margin-top: 26px;
+  background: #074c99;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 3px;
+  width: 80%;
+}
+
+input[type="text"] {
+  border: 0;
+  outline: none;
+  height: 30px;
+  color: #074c99;
+  border-radius: 3px;
+  float: center;
+  width: 35%;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+footer{
+  margin-bottom:30px;
+  text-align:center;
+  font-size:0.825em;
+}
+footer p{
+  margin-bottom:-2.5em;
+  position:relative;
+  text-align: center;
+  color: #074c99;
+}
+
+#string-label {
+	background: #074c99;
+	color: white;
+	padding-right: 12px;
+}
+
+.select-method {
+	display: inline;
+  width: 35%;
+  height: 30px;
+  color: #074c99;
+  margin-top: 1px;
+  padding: 0px;
+}
+
+.select-label {
+	margin-left: 11px;
+}
+
+.display-panel {
+	height: 75px;
+	background: #ededed;
+}
+
+.display-result {
+	text-align: center;
+	background: #074c99;
+	color: white;
+	padding-top: 4px;
+}
+pre span {
+	font-weight: bold;
+	text-align: left;
+	font-size: 1.5rem;
+	color: blue;
+	float: left;
+}
+
+.about-des {
+	color: #000000;
+	text-align: left;
+	float: left;
+	font-size: 1.5rem;
+	font-weight: normal;
+}
+
+@media only screen and (max-width: 1310px) {
+
+	.input-panel{
+		padding-left: 15px;
+	  padding-right: 15px;
+	  padding: 0px;
+	}
+
+
+}
+
+@media only screen and (max-width: 1275px) {
+
+	.input-panel{
+		padding-left: 0px;
+	  padding-right: 0px;
+	  padding: 0px;
+	}
+
+}
+
+@media only screen and (max-width: 1222px) {
+
+	input[type="text"], .select-method {
+		width: 34%;
+		padding: 0px;
+	}*
+
+}
+
+@media only screen and (max-width: 1148px) {
+
+	input[type="text"], .select-method {
+		width: 33%;
+		padding: 0px;
+	}
+
+}
+
+@media only screen and (max-width: 1083px) {
+
+	input[type="text"], .select-method {
+		width: 32%;
+		padding: 0px;
+	}
+
+}
+
+@media only screen and (max-width: 1026px) {
+
+	input[type="text"], .select-method {
+		width: 31%;
+		padding: 0px;
+	}
+
+}
+
+
+@media only screen and (max-width: 997px) {
+
+	input[type="text"], .select-method {
+		width: 30%;
+		padding: 0px;
+	}
+
+}
+
+@media only screen and (max-width: 928px) {
+
+	input[type="text"], .select-method {
+		width: 28%;
+		padding: 0px;
+	}
+}
+
+@media only screen and (max-width: 851px) {
+	#string-label {
+		padding: 0px;
+	}
+
+}
+
+@media only screen and (max-width: 782px) {
+
+	input[type="text"], .select-method {
+		width: 24%;
+	}
+
+}
+
+@media only screen and (max-width: 697px) {
+
+	input[type="text"], .select-method {
+		width: 49.6%;
+	}
+	#string-label {
+		display: none;
+	}
+
+}
+
+@media only screen and (max-width: 654px) {
+
+	input[type="text"], .select-method {
+		width: 49.5%;
+	}
+}
+
+@media only screen and (max-width: 534px) {
+
+	input[type="text"], .select-method {
+		width: 49%;
+	}
+}
