@@ -2,6 +2,10 @@
 
 [![Build Status](https://travis-ci.org/andela-oaladeusi/string-class.svg?branch=development)](https://travis-ci.org/andela-oaladeusi/string-class)
 
+[![Code Climate](https://codeclimate.com/github/andela-oaladeusi/string-class/badges/gpa.svg)](https://codeclimate.com/github/andela-oaladeusi/string-class)
+
+[![Issue Count](https://codeclimate.com/github/andela-oaladeusi/string-class/badges/issue_count.svg)](https://codeclimate.com/github/andela-oaladeusi/string-class)
+
 # string-class
 An extension of the String class in Javascript.
 Using Prototype Oriented Programming; methods, procedures and instance attributes are added to the String class to support more string manipulation features.
