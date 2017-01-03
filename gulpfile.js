@@ -13,7 +13,9 @@ gulp.task('browserSync', () => {
       baseDir: 'src'
     },
       port: process.env.PORT || 5000,
-      open: false
+      open: false,
+      ghostMode: true,
+      ui: false
   });
 });
 
@@ -22,7 +24,7 @@ gulp.task('browserSync', () => {
  *  whenever changes are been made to js, html, and css files
  */
 gulp.task('watch', ['browserSync'], function (){
-  gulp.watch(['src/css/**/*.css','src/*.html','src/js/**/*.js'],browserSync.reload); 
+  gulp.watch(['src/css/**/*.css','src/*.html','src/js/**/*.js'],browserSync.reload);
 
 });
 

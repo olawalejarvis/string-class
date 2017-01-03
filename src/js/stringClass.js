@@ -125,7 +125,7 @@ const stringPrototype = {
   toCurrency(){
       return Number(this)
               .toFixed(2)
-              .replace(/(\d)(?=(\d{3})+(?!\d))/g,'$1,');
+              .replace(/(\d)(?=(\d{3})+\.)/g,'$1,');
   },
 
   /**
