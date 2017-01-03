@@ -1,5 +1,5 @@
 const assert = require('chai').assert;
-require('../src/stringClass');
+require('../src/js/stringClass');
 
 describe("StringClass", () => {
   describe("hasVowels", () => {
