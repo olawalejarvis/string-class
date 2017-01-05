@@ -1,0 +1,13 @@
+sudo: required
+language: node_js
+node_js:
+  - stable
+script: npm test
+before_script:
+ - npm install -g codeclimate-test-reporter
+addons:
+  code_climate:
+    repo_token: 623343b9213b7a076cbfa3963ba3d2fa1a9d89bdb7169671a79e3ba2aa3a723f
+after_success:
+ - npm run coveralls
+ - codeclimate-test-reporter < coverage/lcov.info
