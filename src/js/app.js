@@ -28,44 +28,11 @@ angular.module('stringApp',[])
         $scope.result = 'Type in string';
       }
       else {
-        $scope.result = applyMethod(selectedMethod.id, stringQuery);
+        $scope.result = applyMethod(selectedMethod.label, stringQuery);
       }
     };
 
-  let applyMethod = (methodID, query) => {
-      switch(methodID){
-        case 0:
-          return query.hasVowels();
-        case 1:
-          return query.toUpper();
-        case 2:
-          return query.toLower();
-        case 3:
-          return query.ucFirst();
-        case 4:
-          return query.isQuestion();
-        case 5:
-          return query.words();
-        case 6:
-          return query.wordCount();
-        case 7:
-          return query.inverseCase();
-        case 8:
-          return query.alternatingCase();
-        case 9:
-          return query.getMiddle();
-        case 10:
-          return query.numberWords();
-        case 11:
-          return query.isDigit();
-        case 12:
-          return query.doubleCheck();
-        case 13:
-          return query.toCurrency();
-        case 14:
-          return query.fromCurrency();
-        case 'undefined':
-          return 'Select a Method';
-      }
+    let applyMethod = (method, query) => {
+      return query[method]();
     };
   }]);

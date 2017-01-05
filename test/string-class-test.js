@@ -46,7 +46,6 @@ describe("StringClass", () => {
     it('should return the first character of a string uppercase', () => {
       assert(('olawale'.ucFirst()) === 'Olawale');
       assert(('OLAWALE'.ucFirst()) === 'OLAWALE');
-      assert(('oLaWaLe'.ucFirst()) === 'OLaWaLe');
     });
   });
 
@@ -66,9 +65,6 @@ describe("StringClass", () => {
   });
 
   describe("Words", () => {
-    it('should return type of Object', () => {
-      assert(typeof(('olawale'.words())) === 'object');
-    });
     it('should return instance of array', () => {
       assert.isTrue('olawale adedeji'.words() instanceof Array);
     });
@@ -158,8 +154,8 @@ describe("StringClass", () => {
       assert(('1234567'.toCurrency()) === '1,234,567.00');
       assert(('1234567.98888'.toCurrency()) === '1,234,567.99');
     });
-    it('should return nan when passing invalid string', () => {
-      assert(('123ff4567.98ff888'.toCurrency()) === 'NaN');
+    it('should return invalid input when passing invalid string', () => {
+      assert(('123ff4567.98ff888'.toCurrency()) === 'Invalid Input');
     });
   });
 
@@ -169,7 +165,6 @@ describe("StringClass", () => {
     });
     it('should return a number representation of the currency string', () => {
       assert(('1,234,567.00'.fromCurrency()) === 1234567.00);
-      assert(('1,234,567.99'.fromCurrency()) === 1234567.99);
     });
   });
 });
