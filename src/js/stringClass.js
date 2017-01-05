@@ -5,7 +5,7 @@ const stringPrototype = {
    * @return {Boolean} True or false depending on the match
    */
   hasVowels () {
-      return (/[aAeEiIoOuU]/g).test(this);
+      return (/[aeiou]/i).test(this);
   },
 
   /**
@@ -24,7 +24,7 @@ const stringPrototype = {
  */
   toLower() {
     return this.replace(/[A-Z]/g, (match) => {
-      return String.fromCharCode(match.charCodeAt() + 32)
+      return String.fromCharCode(match.charCodeAt() + 32);
     });
   },
 
@@ -41,7 +41,7 @@ const stringPrototype = {
    * @return {Boolean} True or false depending on the match
    */
   isQuestion(){
-    return (/[\w ]+\?$/.test(this))
+    return (/[\w ]+\?$/.test(this.trim()));
   },
 
   /**
@@ -66,7 +66,7 @@ const stringPrototype = {
  */
   inverseCase() {
     return this.replace(/[a-z]|[A-Z]/g, (match) => {
-      return match === match.toLower()? match.toUpper() : match.toLower();
+      return match === match.toLower() ? match.toUpper() : match.toLower();
     });
   },
 
@@ -76,7 +76,7 @@ const stringPrototype = {
  */
   alternatingCase() {
     return this.replace(/[a-z]|[A-Z]/g, (match, index) => {
-      return (index+1) % 2 === 1? match.toLower() : match.toUpper();
+      return (index + 1) % 2 === 1 ? match.toLower() : match.toUpper();
     });
   },
 
@@ -86,7 +86,7 @@ const stringPrototype = {
  */
   getMiddle() {
     let lenDiv2 = this.length / 2;
-    return this.length % 2 === 0? `${this[lenDiv2-1]}${this[(lenDiv2)]}`
+    return this.length % 2 === 0 ? `${this[lenDiv2 - 1]}${this[(lenDiv2)]}`
                               : this[Math.floor(lenDiv2)];
   },
 
@@ -98,8 +98,8 @@ const stringPrototype = {
     const numberToWord = ['zero', 'one', 'two', 'three', 'four',
                           'five', 'six', 'seven', 'eight', 'nine']
     return this.replace(/\d/g, function(match){
-      return `${numberToWord[match]}`;
-    });
+      return `${numberToWord[match]} `;
+    }).trim();
   },
 
   /**

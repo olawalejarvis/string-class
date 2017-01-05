@@ -14,10 +14,10 @@ Using Prototype Oriented Programming; methods, procedures and instance attribute
 - Travis CI
 - Coveralls
 - Hound CI
-- Instabul Test Coverage Generator
+- Istanbul Test Coverage Generator
 
 ## Methods Added
-These methods were added:
+The following methods were added:
 - hasVowels: Checks if the argument contains vowels
 
 - toUpper: Converts the argument to uppercase characters
@@ -51,11 +51,14 @@ These methods were added:
 ## How to use
 1.  Clone the repository into your local machine
     `git clone https://github.com/andela-oaladeusi/string-class.git`
-2.  Change working directory to string-class
+2.  Navigate to string-class
+    `cd string-class`
 3.  Run `npm install` to install all the dependencies.
-4.  To run tests
+4.  To start string-class app
+    `npm start`
+5.  To run tests
     `npm test`
-5.  Move the string-class.js file, located in the "src" directory, into any project directory you wish to use it in.
+6.  Move the string-class.js file, located in the "src" directory, into any project directory you wish to use it in.
 
 ## Web use
 URL: https://class-string.herokuapp.com/

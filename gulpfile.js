@@ -14,7 +14,7 @@ gulp.task('browserSync', () => {
     },
       port: process.env.PORT || 5000,
       open: false,
-      ghostMode: true,
+      ghostMode: false,
       ui: false
   });
 });

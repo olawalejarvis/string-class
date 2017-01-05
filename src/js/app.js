@@ -1,7 +1,7 @@
 "use strict";
 angular.module('stringApp',[])
   .controller('stringController', ['$scope', ($scope) => {
-     
+
     $scope.options = [
       { id: 0, label: 'hasVowels'},
       { id: 1, label: 'toUpper'},
@@ -23,16 +23,16 @@ angular.module('stringApp',[])
     $scope.showResult = (stringQuery, selectedMethod) => {
       if (selectedMethod === undefined) {
         $scope.result = 'Select a Method';
-      } 
+      }
       else if (stringQuery === undefined) {
         $scope.result = 'Type in string';
-      } 
+      }
       else {
-        $scope.result = $scope.applyMethod(selectedMethod.id, stringQuery);
+        $scope.result = applyMethod(selectedMethod.id, stringQuery);
       }
     };
 
-    $scope.applyMethod = (methodID, query) => {
+  let applyMethod = (methodID, query) => {
       switch(methodID){
         case 0:
           return query.hasVowels();
@@ -64,8 +64,8 @@ angular.module('stringApp',[])
           return query.toCurrency();
         case 14:
           return query.fromCurrency();
-        case 'undefined': 
+        case 'undefined':
           return 'Select a Method';
       }
-    };	
+    };
   }]);
